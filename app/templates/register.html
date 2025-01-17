@@ -1,0 +1,31 @@
+<!--这个模版继承base模版-->
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Register{% endblock %}</h1>
+
+  {% if error %}
+    <h4 style="color: red;">{{ error }}</h4>
+  {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+  <form method = "post">
+
+    <label for = "email">Email</label>
+    <input name = "email" id = "username" required>
+    <br><br>
+    <label for = "password">Password</label>
+    <input type = "password" name = "password1" id = "password1" required>
+    <br><br>
+    <label for = "password">Password again</label>
+    <input type = "password" name = "password2" id = "password2" required>
+
+    <input type = "submit" value = "Register">
+
+  </form>
+
+{% endblock %}
+
